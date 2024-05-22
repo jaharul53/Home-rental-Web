@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="navbar">
+        <a href="index.php"><img src="banglalogo.png" alt="" height="70"></a>
+        <a href="rent.html" class="links">Rent</a>
+        <a href="contactus.php" class="links">About Us</a>
+        <button onclick = "window.location.href='login.html';">Login</button>
+    </section>
+    </section>
+    <br><br><br>
+    <fieldset>
+
+        <legend class="mid">Sign Up</legend><br>
+
+        <form class="mid" action="signup.php" method="post" onsubmit="validatePassword(event)">
+            <!-- <label for="name">Name</label> -->
+            <input type="text" name="name" id="name" placeholder="Name" required><br><br>
+
+            <!-- <label for="id">Student ID</label> -->
+            <input type="text" name="nid" id="nid" placeholder="National ID Number" required><br><br>
+
+            <!-- <label for="batch">Batch</label> -->
+            <input type="text" name="address" id="address" placeholder="Address" required><br><br>
+
+
+            <!-- <label for="email">E-mail</label> -->
+            <input type="email" name="email" id="email" placeholder="Email" required><br><br>
+
+            <!-- <label for="pass">Password</label> -->
+            <input type="password" name="password" id="password" placeholder="Password" required><br><br>
+            <input style="color: aliceblue; background-color: crimson;" type="submit" value="Sign Up">
+
+        </form>
+
+
+    </fieldset> <br>
+
+    <section class="mid">Already have an account? <a href="login.html">Login</a> form here.</section>
+
+    <section>
+
+    </section>
+    
+</body>
+</html>
+<script>
+    function validatePassword(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      var passwordInput = document.getElementById("password");
+      var password = passwordInput.value;
+      var passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+      if (!passwordPattern.test(password)) {
+        alert("Password must have at least 8 characters, including an uppercase letter, a lowercase letter, and a number.");
+        passwordInput.value = "";
+        passwordInput.focus();
+        return false;
+      }
+      
+      // Password meets the criteria, allow form submission
+      event.target.submit();
+    }
+  </script>

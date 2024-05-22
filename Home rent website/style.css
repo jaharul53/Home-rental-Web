@@ -1,0 +1,41 @@
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    
+}
+
+
+.links{
+    text-decoration: none;
+    color: aliceblue;
+    margin-top: 25px;
+}
+button{
+    height: 35px;
+    margin-top: 15px;
+    background-color: crimson;
+    color: aliceblue;
+}
+
+.midpink{
+    text-align: center;
+    color: aliceblue;
+    background-color: crimson
+}
+
+.midrb{
+    text-align: center;
+    color: rgb(255, 0, 0);
+    background-color: black;
+}
+
+.mid{
+    text-align:center;
+}
+
+.table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
